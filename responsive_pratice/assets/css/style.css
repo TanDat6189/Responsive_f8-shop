@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item {
+    margin-top: 16px;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    min-height: 180px;
+    line-height: 180px;
+    background-color: orange;
+}
+
+.main {
+    display: flex;
+    padding: 0 32px;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #666;
+}
+
+.content {
+    /* width: calc(100% - 300px); */
+    /* Dùng flex, không phải flex-grow */
+    flex: 1;
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+}
+
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+/* Advertisement */
+@media (max-width: 739px) {
+    .advertisement {
+        display: none;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1113px) {
+    .advertisement {
+        display: block;
+    }
+
+    .col:nth-child(1) {
+        order: 1;
+    }
+
+    .col:nth-child(2) {
+        order: 2;
+    }
+
+    .col:nth-child(3) {
+        order: 3;
+    }
+
+    .col:nth-child(4) {
+        order: 5;
+    }
+
+    .col:nth-child(5) {
+        order: 4;
+    }
+
+    .col:nth-child(1n+6) {
+        order: 6;
+    }
+}
+
+@media (min-width: 1113px) {
+    .advertisement {
+        display: block;
+    }
+
+    .col:nth-child(1) {
+        order: 1;
+    }
+
+    .col:nth-child(2) {
+        order: 2;
+    }
+
+    .col:nth-child(3) {
+        order: 3;
+    }
+
+    .col:nth-child(4) {
+        order: 4;
+    }
+
+    .col:nth-child(5) {
+        order: 5;
+    }
+
+    .col:nth-child(1n+6) {
+        order: 6;
+    }
+}
